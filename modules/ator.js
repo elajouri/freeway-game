@@ -37,12 +37,14 @@ function colisaoAtor() {
     for(let i = 0; i < imagemCarros.length; i++) {
     colisao = collideRectCircle(xCarros[i], yCarros[i], comprimentoCarro, alturaCarro, xVaca, yVaca, 30);
     if (colisao){
+        if (pontos <= 0) {
+            alert("aprende a jogar !")
+        } else {
+            pontos--;
+        }
         yVaca = 870
         somcolisao.play();
     }
-    if (colisao && pontos > 0) {
-        pontos--;
-        }
     }
 }
 
